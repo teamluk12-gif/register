@@ -1,0 +1,28 @@
+{
+    "description": "Student Shala - A learning and student management platform",
+    "domain": "is-not-a.dev",
+    "subdomain": "studentshala",
+
+    "owner": {
+        "repo": "https://github.com/teamluk12-gi/studentshala",
+        "email": "teamluk12@gamil.com"
+    },
+
+    "record": {
+        "A": ["192.0.2.1", "192.0.2.2"], 
+        "AAAA": ["2001:db8::1", "2001:db8::2"],
+        "CNAME": "studentshala.com",
+        "MX": ["mail1.studentshala.com", "mail2.studentshala.com"],
+        "TXT": ["studentshala_verification=abcdef123456"],
+        "CAA": [
+            { "flags": 0, "tag": "issue", "value": "letsencrypt.org" },
+            { "flags": 0, "tag": "issuewild", "value": "sectigo.com" }
+        ],
+        "SRV": [
+            { "priority": 10, "weight": 60, "port": 5060, "target": "sip.studentshala.com" },
+            { "priority": 20, "weight": 10, "port": 5061, "target": "sip-backup.studentshala.com" }
+        ]
+    },
+
+    "proxied": false
+}
